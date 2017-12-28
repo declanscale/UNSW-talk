@@ -1,0 +1,25 @@
+Date	Start	Stop	Activity	Comments
+
+10.24	11:00	3:00	Coding		Can print the user details
+
+10.24 	4:00	6:00	Coding		Can hide the details of the user
+
+10.24	6:00	10:00	Coding		Can print the user's image, but the login still have bug
+					can login, but cannot check the password
+10.25	10:00	3:00	Coding		Can show user's recent post
+
+10.25	5:00	10:00	Debuging	Fix the problems that user post can only show 0-9.txt
+					Write the search the friends
+10.26	11:00	4:00	Coding		Can search friends by name and after search friends
+					can click the friend's image to see friends profile
+10.26	6:00	8:00	Debuging	Fix the bug that can not match low-case in serching
+
+10.26	8:00	11:00	Coding		Can delate friend in user's friends page and add friends
+					after searching by name
+10.27	12:00	5:00	Coding 		Can search the user post and fix the bug that user post
+					not in right order
+10.27	8:00	11:00	Debuging	Fix some print format problems and write the user makeing
+					post parts
+10.28	12:00	3:00 	Coding		User can make post and can print the post time correctly
+  
+
