@@ -1,6 +1,5 @@
 # UNSW-talk
-assign2 of comp2041 writen by python 
-
+An simple school social websit
 
 Andrew has decided he will make himself rich exploiting COMP[29]041 students' coding skills . Andrew's plan is to have COMP[29]041 students create a social media platform for UNSW students called UNSWtalk Because Andrew is unaware of any other competing social media platforms, he thinks UNSWtalk will become very popular and he will become rich.
 He wants UNSWtalk to allow students to post messages, other students to comment on these messges and replies to these comments to be added.
