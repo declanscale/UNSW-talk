@@ -1,0 +1,46 @@
+
+
+{% extends "base.html" %}
+
+{% block body_contents %}
+
+
+
+
+
+
+
+
+
+
+{% set i = 0 %}
+
+{% for dict in post_num_list %}
+
+	{% if dict['num'] == i %}
+
+		<b>My Post</b>
+		<p>{{dict['self_post']}}</p>
+		<b>Reply To this</b>
+		{% for reply in dict['reply_to_post'] %}
+			<p>{{reply[i:100]}}</p>
+		{% endfor %}
+		<p><b>============</b></p>
+		
+	{% endif %}
+	{% set i = i+1 %}	
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
