@@ -2,7 +2,8 @@
 
 # written by andrewt@cse.unsw.edu.au October 2017
 # as a starting point for COMP[29]041 assignment 2
-# https://cgi.cse.unsw.edu.au/~cs2041/assignments/UNSWtalk/
+# https://cgi.cse.unsw.edu.au/~cs2041/assignments/UNSWtalk
+#written by Daisong Yu (z5098539)
 
 import os, glob, operator, datetime, re, collections,sys
 from flask import Flask, render_template, session, request, redirect, url_for
