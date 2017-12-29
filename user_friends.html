@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block body_contents %}
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{url_for('user_profile')}}">Profile</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url_for('user_post')}}">Post <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('user_friends')}}">Friends</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" action="{{url_for('search')}}" method="POST">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Name</button>
+    </form>
+  </div>
+</nav>
+
+
+
+
+<b><h1>Friends</h1></b>
+
+
+<div class="unswtalk_friends_img">
+
+<b><h3>{{hint}}</h3></b>
+
+{% for path in friends_img_path_list %}
+
+	{% set list = path.split('/') %}
+	{% set cur_zid = list[2] %}
+	
+	<a href="{{url_for('friend_profile',cur_zid=cur_zid)}}"><img src={{path}} alt="That guy is lazzy" width="200" height="240"></a>
+	
+	
+	
+
+	<form method="POST" action="{{url_for('delate_friend',cur_zid=cur_zid)}}">
+		<input type="hidden" name="n" value="7">
+		<input type="submit" value="Delate Friend" class="unswtalk_button">
+	</form>
+	
+	
+	
+	
+	
+{% endfor %}
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}
