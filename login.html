@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body_contents %}
+
+{{zid_error}}
+{{password_error}}
+
+
+<p>
+<form method="POST" action="{{url_for('login')}}">
+<p>
+zid: <input name="zid" >
+<p>
+password: <input type="password" name="password" > 
+<p>
+<input type="submit" value="Login" >
+</form>
+
+{% endblock %}
