@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block body_contents %}
+<div class="unswtalk_user_details">
+
+<p style="display:inline">
+<img src={{img}} alt="student image" width="250" height="300">
+</p>
+{{student_details}}
+
+</div>
+
+<b><h1>Friends</h1></b>
+
+<div class="unswtalk_friends_img">
+
+{% for path in friends_img_path_list %}	
+	<img src={{path}} alt="That guy is lazzy" width="50" height="60">
+{% endfor %}
+
+</div>
+
+
+
+<b><h1>student post</h1></b>
+
+{% for post in post_list %}
+
+	{% for key, value in post.items() %}	
+			<h3>{{value}}</h3>
+	{% endfor %}
+	<b>==================================================================</b>
+
+{% endfor %}
+
+
+
+<form method="POST" action="start">
+    <input type="hidden" name="n" value="7">
+    <input type="submit" value="Next student" class="unswtalk_button">
+</form>
+{% endblock %}
